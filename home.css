@@ -1,0 +1,19 @@
+#search_bar {
+    width: 35%;
+    height: 50px;
+    border-radius: 50px;
+    background-color: gray;
+    color: rgb(205, 205, 205);
+    border: solid rgb(74, 73, 73) 1px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#search_text {
+    margin: 0px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-family: 'Courier New', Courier, monospace;
+}
