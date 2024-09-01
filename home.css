@@ -1,47 +1,66 @@
 #search {
     width: 30%;
-    height: 30px;
+    height: 40px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+    display: inline;
 }
 
 #search_bar {
-    width: 90%;
-    height: 30px;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
+    width: calc(100% - 90px);
+    height: 40px;
+    border-radius: 50px;
     background-color: rgb(38, 38, 38);
+    font-size: 20px;
     color: white;
     border: solid rgb(73, 73, 73) 1px;
-    padding-left: 10px;
+    background: url("Images/search.svg") no-repeat scroll 10px;
+    background-size: 20px 20px;
+    padding-left: 35px;
 }
 
 #search_bar:focus {
     outline: solid rgb(0, 150, 255) 1px;
-    width: 100%;
-    position: relative;
-    left: -10%;
-    padding-left: 10%;
 }
 
-#search_ico {
-    width: 20px;
-    aspect-ratio: 1;
+#gem {
+    width: 40px;
+    height: 40px;
     position: absolute;
-    transform: translate(-50%, -50%);
-}
-
-#search_button {
-    width: 70px;
-    aspect-ratio: 2;
-    position: absolute;
+    left: calc(100% - 40px);
+    border-radius: 50px;
+    background-color: rgb(38, 38, 38);
+    background: url("Images/search.svg") no-repeat scroll right;
+    background-size: 20px 20px;
+    background-position: calc(100% - 10px);
     border: solid rgb(73, 73, 73) 1px;
-    background-color: rgb(50, 50, 50);
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 50px;
+    color: white;
+    padding-left: 10px;
+}
+
+#gem:focus {
+    outline: solid rgb(0, 150, 255) 1px;
+}
+
+@keyframes fullGem {
+    from {width: 40px; position: absolute; left: calc(100% - 40px);}
+    to {width: calc(100% - 50px); position: absolute; left: 50px;}
+}
+
+@keyframes minSer {
+    from {width: calc(100% - 90px)}
+    to {width: 40px;}
+}
+
+@keyframes fullSer {
+    from {width: 40px;}
+    to {width: calc(100% - 90px);}
+}
+
+@keyframes minGem {
+    from {width: 90%; position: absolute; left: 50px;}
+    to {width: 40px; position: absolute; left: calc(100% - 40px);}
 }
 
 body {
