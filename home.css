@@ -63,6 +63,15 @@
     to {width: 40px; position: absolute; left: calc(100% - 40px);}
 }
 
+#inf {
+    width:  120px;
+    aspect-ratio: 2;
+    background-image: linear-gradient(to right, rgb(42, 42, 200), rgb(72, 72, 255));
+    -webkit-mask-image: url("Images/mask.png");
+    mask-image: url("Images/mask.png");
+    mask-size: 120px 60px;
+}
+
 body {
     background-color: rgb(30, 30, 30);
 }
