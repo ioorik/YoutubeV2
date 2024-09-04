@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YoutubeV2</title>
+        <link rel="stylesheet" href="/Search/style.css">
+    </head>
+    <body>
+        <div id="search">
+            <input type="text" id="search_bar" placeholder="Search" autocomplete="off">
+            <input type="button" id="gem" onclick="gemify()" autocomplete="off">
+        </div>
+        <div id="isGem">{{gemini}}</div>
+        <script src="/Search/script.js"></script>
+        <script>
+            window.onload = function () {
+                let isgem = document.getElementById('isGem').innerText
+                document.getElementById('isGem').innerHTML = ""
+                if (isgem == "True") {
+                    gemify()
+                    document.getElementById('gem').value = "{{q}}"
+                }
+                else {
+                    document.getElementById('search_bar').value = "{{q}}"
+                }
+            }
+        </script>
+
+        <div id="inf" onclick="home()"></div>
+    </body>
+</html>
