@@ -1,5 +1,4 @@
 from bottle import Bottle, static_file, request, template, run
-from flask import redirect
 from langchain_ollama import OllamaLLM
 
 app = Bottle(False)
@@ -8,6 +7,13 @@ app = Bottle(False)
 @app.route("/")
 def home():
     return template("Home/index.html")
+
+
+@app.route("/gemini-data-channel")
+def gemDataChan():
+    prompt = request.query['prompt']
+    model = OllamaLLM(model="llama3")
+    return {"content": model.invoke(prompt)}
 
 
 @app.route('/search')
@@ -26,9 +32,19 @@ def search():
     return template('Search/index.html', q=q, gemini=isgem)
 
 
-@app.route("/Home/<script>")
-def home(script):
-    return static_file(script, root="Home")
+@app.route("/shorts")
+def shorts():
+    return template('Shorts/index.html')
+
+
+@app.route("/Home/css/<script>")
+def css(script):
+    return static_file(script, root="Home/css")
+
+
+@app.route("/Home/js/<script>")
+def js(script):
+    return static_file(script, root="Home/js")
 
 
 @app.route("/Home/Images/<image>")

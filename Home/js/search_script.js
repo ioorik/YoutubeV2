@@ -55,7 +55,3 @@ function searchify () {
     search_bar.style.animationDuration = "1s";
     search_bar.style.animationFillMode = "forwards";
 }
-
-function home () {
-    window.location.replace("/")
-}
