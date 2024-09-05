@@ -2,15 +2,56 @@
 <html>
     <head>
         <title>YoutubeV2</title>
-        <link rel="stylesheet" href="/Home/style.css">
+        <link rel="stylesheet" href="/Home/css/search_style.css">
+        <link rel="stylesheet" href="/Home/css/menu_style.css">
+        <style>
+            body {
+                background-color: rgb(23, 23, 23);
+            }
+        </style>
     </head>
     <body>
+        
         <div id="search">
             <input type="text" id="search_bar" placeholder="Search" autocomplete="off">
             <input type="button" id="gem" onclick="gemify()" autocomplete="off">
         </div>
-        <script src="/Home/script.js"></script>
+        
+        <div id="menu-wrapper">
+            <div id="top-bar">
+                <button id="toggle" onclick="toggle()">
+                    <svg height="40px" width="40px">
+                        <path d="M8 17 l25 0 M8 25 l25 0 M8 33 l25 0" style="fill: none; stroke: white; stroke-width: 1.5px;" >
+                    </svg>
+                </button>
+                <div id="inf" title="Youtube Home"></div>
+            </div>
+            <div id="menu">
+                <div class="menu-button" id="home-button">
+                    <svg height="40px" width="40px">
+                        <path d="M7 15 L7 35 L15 35 L15 20 L24 20 L25 35 L32 35 L32 15 L20 5 Z" style="fill: none; stroke: white; stroke-width: 1.5px"/>
+                    </svg>
+                    <p class="button-text">Home</p>
+                </div>
 
-        <div id="inf" onclick="home()"></div>
+                <div class="menu-button" id="shorts-button">
+                    <svg height="40px" width="40px">
+                        <path d="M10 5 L7 35 L15 35 L20 20 L25 35 L33 35 L30 5 Z" style="fill: none; stroke: white; stroke-width: 1.5px"/>
+                    </svg>
+                    <p class="button-text">Shorts</p>
+                </div>
+
+                <div class="menu-button" id="subs-button">
+                    <svg height="40px" width="40px">
+                        <path d="M7 15 L7 35 L15 35 L15 20 L24 20 L25 35 L32 35 L32 15 L20 5 Z" style="fill: none; stroke: white; stroke-width: 1.5px"/>
+                    </svg>
+                    <p class="button-text">Subsriptions</p>
+                </div>
+            </div>
+        </div>
+
+        <script src="/Home/js/search_script.js"></script>
+        <script src="/Home/js/menu_script.js"></script>
+
     </body>
 </html>
